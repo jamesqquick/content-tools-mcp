@@ -8,14 +8,14 @@
   "ai": {
     "binding": "AI",
   },
-  "durable_objects": {
-    "bindings": [
-      {
-        "name": "CONTENT_TOOLS_MCP",
-        "class_name": "ContentToolsMCP",
-      },
-    ],
-  },
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "ContentToolsMCP",
+				"class_name": "ContentToolsMCP",
+			},
+		],
+	},
   "migrations": [
     {
       "tag": "v1",
