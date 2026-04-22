@@ -1,29 +1,40 @@
 {
-	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "content-tools-mcp",
-	"account_id": "e9bc21da719562a3e45d77de7dd042de",
-	"compatibility_date": "2025-04-01",
-	"main": "src/index.ts",
-	"compatibility_flags": [
-		"nodejs_compat"
-	],
-	"ai": {
-		"binding": "AI"
-	},
-	"durable_objects": {
-		"bindings": [
-			{
-				"name": "CONTENT_TOOLS_MCP",
-				"class_name": "ContentToolsMCP"
-			}
-		]
-	},
-	"migrations": [
-		{
-			"tag": "v1",
-			"new_sqlite_classes": [
-				"ContentToolsMCP"
-			]
-		}
-	]
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "content-tools-mcp",
+  "account_id": "e9bc21da719562a3e45d77de7dd042de",
+  "compatibility_date": "2025-04-01",
+  "main": "src/index.ts",
+  "compatibility_flags": ["nodejs_compat"],
+  "ai": {
+    "binding": "AI",
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "CONTENT_TOOLS_MCP",
+        "class_name": "ContentToolsMCP",
+      },
+    ],
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["ContentToolsMCP"],
+    },
+  ],
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true,
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1,
+    },
+  },
 }
